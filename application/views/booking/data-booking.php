@@ -16,7 +16,7 @@
                             <?php
                             $no = 1;
                             foreach ($temp as $t) {
-                            ?>
+                                ?>
                                 <tr>
                                     <td><?= $no; ?></td>
                                     <td>
@@ -26,30 +26,26 @@
                                     <td nowrap><?= $t['penerbit']; ?></td>
                                     <td nowrap><?= substr($t['tahun_terbit'], 0, 4); ?></td>
                                     <td nowrap>
-                                        <a href="<?= base_url('booking/hapusbooking/' . $t['id_buku']); ?>" onclick="return_konfirm('Yakin tidak Jadi Booking '.$t
-                                        ['judul_buku'])"><i class="btn btn-sm btnoutline-danger fas fw fa-trash"></i></a>
+                                        <a href="<?= base_url('booking/hapusbooking/' . $t['id_buku']); ?>" onclick="return_konfirm('Yakin tidak Jadi Booking '.$t['judul_buku'])"><i class="btn btn-sm btn-outline-danger fas fw fa-trash"></i></a>
                                     </td>
                                 </tr>
-                            <?php $no++;
+                                <?php $no++;
                             } ?>
-                        </table>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <hr>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <a class="btn btn-sm btn-outline-primary" href="<?php echo base_url(); ?>"><span
-                    class="fas fw fa-play"></span> Lanjutkan Booking Buku</a>
-
-                    <a class="btn btn-sm btn-outline-success" href="<?php echo base_url() .'booking/
-                    bookingSelesai/' . $this->session->userdata('id_user'); ?>"><span class="fas fw fastop"></span> Selesaikan Booking</a>
-                </td>
-            </tr>
-        </table>
-    </center>
-</div>
+                            </table>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <a class="btn btn-sm btn-outline-primary" href="<?php echo base_url(); ?>"><span class="fas fw fa-play"></span> Lanjutkan Booking Buku</a>
+                        <a class="btn btn-sm btn-outline-success" href="<?php echo base_url() . 'booking/bookingSelesai/' . $this->session->userdata('id_user'); ?>"><span class="fas fw fa-stop"></span> Selesaikan Booking</a>
+                    </td>
+                </tr>
+            </table>
+        </center>
+    </div>
